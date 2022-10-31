@@ -2,7 +2,6 @@ import React from 'react'
 import { AffairType } from '../../HW2'
 import s from './Affair.module.css'
 import s2 from '../Affairs.module.css'
-import SuperButton from "../../../hw04/common/c2-SuperButton/SuperButton";
 
 type AffairPropsType = {
     // key не нужно типизировать
@@ -36,7 +35,7 @@ function Affair(props: AffairPropsType) {
                 {/**/}
             </div>
 
-            <SuperButton
+            <button
                 id={'hw2-button-delete-' + props.affair._id}
                 className={buttonClass}
                 // need to fix
@@ -46,7 +45,7 @@ function Affair(props: AffairPropsType) {
                 {/*текст кнопки могут изменить студенты*/}
                 X
                 {/**/}
-            </SuperButton>
+            </button>
         </div>
     )
 }
