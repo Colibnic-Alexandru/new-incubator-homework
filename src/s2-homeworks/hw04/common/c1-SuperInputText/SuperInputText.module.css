@@ -2,6 +2,9 @@
 }
 
 .input {
+    margin: 15px;
+    background: green;
+    color: black;
 }
 
 .inputWrapper {
