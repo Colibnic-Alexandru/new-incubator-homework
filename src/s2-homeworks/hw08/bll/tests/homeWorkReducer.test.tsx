@@ -17,7 +17,7 @@ beforeEach(() => {
 
 test('sort name up', () => {
     const newState = homeWorkReducer(initialState, {
-        type: 'sort',
+        type: 'SORT_UP',
         payload: 'up',
     })
 
@@ -25,7 +25,7 @@ test('sort name up', () => {
 })
 test('sort name down', () => {
     const newState = homeWorkReducer(initialState, {
-        type: 'sort',
+        type: 'SORT_DOWN',
         payload: 'down',
     })
 
@@ -33,7 +33,7 @@ test('sort name down', () => {
 })
 test('check age 18', () => {
     const newState = homeWorkReducer(initialState, {
-        type: 'check',
+        type: 'CHECK_AGE',
         payload: 18,
     })
 
