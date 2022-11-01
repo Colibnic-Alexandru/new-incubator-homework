@@ -22,10 +22,10 @@ export type ActionType = SortUpType | SortDownType | CheckAgeType
 export const homeWorkReducer = (state: StateType, action: ActionType): StateType => { // need to fix any
     switch (action.type) {
         case 'SORT_UP': {
-            return [...state.sort((a, b) => a.name.localeCompare(b.name))]
+            return [...state.sort((a, b) => a.name > b.name ? 1 : -1)]
         }
         case 'SORT_DOWN': {
-            return [...state.sort((a, b) => b.name.localeCompare(a.name))]
+            return [...state.sort((a, b) => a.name < b.name ? 1 : -1)]
         }
         case 'CHECK_AGE': {
             return [...state.filter(user => user.age > action.payload)]
